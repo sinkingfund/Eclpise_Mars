@@ -1,0 +1,46 @@
+			*******************************************
+			*******************************************
+			*******				 **********
+			*******  	ECLIPSE_MARS	 **********
+		 	*******				 **********
+			*******************************************
+***********************************************************************************************
+
+Chapter_01 : If you some how "need to work with intel_Quartus prime software."
+	 	And you need to work with eclipse_mars to program NIOS II procs
+
+		You will suffer numerous problem, like eclipse will crash.
+		So, You got to chill your irritation, take a deep breadth -->
+		
+		#########	I WILL GUIDE YOU, IAMROOT/GOD/GOD5E 	#########
+
+
+Chapter_02 : DO THE FORMALITIS
+
+		Download the eclipse SBT from intel_website.
+		Extract it in 
+		/home/pratik/intelFpga/20.1/nios2-eds //fix this
+
+		then rename the extracted folder "eclipse_nios2",
+		
+		find the plugin.tar.gz and extract such that it replaces the files inside "eclipse_nios2" 
+
+Chapter_03 : Hit to run eclipse If works then Every thing is OKK
+
+		>> GLAD BOOM You did it.
+
+
+Chapter_04 : Ididn't Run Right, "SAD" come to me..
+		Eclipse Screen Flashed and vanishes and didnot work
+
+		If its Quartus 19.1 
+
+			I will show some error like 
+
+		If its Quartus 20.1 
+			
+			I shows some error like 
+
+		Tp fix this, 
+			
+		
