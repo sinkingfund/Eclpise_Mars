@@ -1,46 +1,97 @@
 			*******************************************
 			*******************************************
 			*******				 **********
-			*******  	ECLIPSE_MARS	 **********
-		 	*******				 **********
+			*******		ECLIPSE_MARS	 **********
+			*******				 **********
 			*******************************************
 ***********************************************************************************************
 
 Chapter_01 : If you some how "need to work with intel_Quartus prime software."
-	 	And you need to work with eclipse_mars to program NIOS II procs
+	        And you need to work with eclipse_mars to program NIOS II procs
 
 		You will suffer numerous problem, like eclipse will crash.
 		So, You got to chill your irritation, take a deep breadth -->
 		
-		#########	I WILL GUIDE YOU, IAMROOT/GOD/GOD5E 	#########
+		#########	I WILL GUIDE YOU, IAMROOT/GOD/GOD5E #########
 
 
 Chapter_02 : DO THE FORMALITIS
+		
+		INSTALL JAVA
+		------------------------------------------
+		
+		$ sudo apt-get install openjdk-8-jdk
+		
+		-------------------------------------end--
+		
 
-		Download the eclipse SBT from intel_website.
+		SET_ECLIPSE
+		------------------------------------------
+		Download[2]  the eclipse SBT from intel_website.
 		Extract it in 
-		/home/pratik/intelFpga/20.1/nios2-eds //fix this
+		/home/pratik/intelFpga/20.1/nios2eds/bin
 
 		then rename the extracted folder "eclipse_nios2",
 		
-		find the plugin.tar.gz and extract such that it replaces the files inside "eclipse_nios2" 
-
+		Open ..nios2eds/bin and  find the "eclipse_nios2_plugin.tar.gz" and extract such that it replaces the files inside "eclipse_nios2" 
+		
+		----------------------------------------end--
+		
 Chapter_03 : Hit to run eclipse If works then Every thing is OKK
 
 		>> GLAD BOOM You did it.
 
 
-Chapter_04 : Ididn't Run Right, "SAD" come to me..
+Chapter_04 : Didn't Run Right, "SAD" come to me..
 		Eclipse Screen Flashed and vanishes and didnot work
 
 		If its Quartus 19.1 
 
 			I will show some error like 
 
+			" ImportError: /lib64/libstdc++.so.6: version `CXXABI_1.3.8' not found "
+			" gdk-pixbuf-error-quark, 5 "
+	
+			// actually libstdc++.so.6 in /intelFpga/19.1/quartus/linux64  
+			// doesnot have `CXXABI_1.3.8' 
+			// So you find a libstdc++ wich have `CXXABI_1.3.8' and paste in ..quartus/linux64 repo
+
+			
+			// For this check the error find "libstdc++.so.6"  in "usr/lib/x86_64-linux-gnu"
+			// And paste it in ../intelFpga/19.1/quartus/linux64 
+			
+			
+		!!!!!!!!!! solved !!!!!!!!!!!!
+
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+		
 		If its Quartus 20.1 
 			
 			I shows some error like 
 
-		Tp fix this, 
+			" free(): invalid pointer "
+
+		To fix this follow this link [3] : https://community.intel.com/t5/Intel-Quartus-Prime-Software/Nios-Eclipse-crashes-free-invalid-pointer/m-p/1215911
+		
+		>> IT SHOWS COMMAND LIKS <<
+
+		$ cd ..../intelFPGA/20.1/quartus/linux64
+		$ mv jre64 jre64_old
+		$ ln -s /lib/jvm/java-1.8.0-openjdk-amd64/jre jre64 *
+
+
+		* but your "jre is installed in different location"
+		So run command like 
+
+		$ ln -s /usr/lib/jvm/java-1.8.0-openjdk-amd64/jre jre64
+		
+		
+		!!!!!!!!! Solved !!!!!!!!! 
+
 			
 		
+Chapter_05 : References
+
+		[1] Remove Java Completely	: https://askubuntu.com/questions/84483/how-to-completely-uninstall-java
+		[2] Download Eclipse CDT	: https://archive.eclipse.org/technology/epp/downloads/release/mars/2/eclipse-cpp-mars-2-linux-gtk-x86_64.tar.gz 
+		[3] intel community link        : https://community.intel.com/t5/Intel-Quartus-Prime-Software/Nios-Eclipse-crashes-free-invalid-pointer/m-p/1215911
